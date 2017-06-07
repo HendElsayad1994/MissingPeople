@@ -22,8 +22,13 @@ loginsearch(n,p){
    this.LS.getparent().subscribe(res=>{
     
      this.parent=res;
-     console.log(parent);
+     //console.log(parent);
      this.aparent=this.parent.find(o=>o.Email==n && o.Password==p);
+
+     if(this.aparent != undefined){
+
+     }
+     console.log('welcome',this.aparent);
 
 
 
