@@ -1,3 +1,26 @@
 <p>
-  child-info works!
+  Child Information!
 </p>
+<div>
+  <input type="text" #childid/>
+  <button (click)='recentLoc(childid)'>Locations</button>
+  <div>
+    <table>
+      <tr>
+        <th>Location</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Wednesday</th>
+        <th></th>
+      </tr>
+
+        <tr *ngFor='let c of childinfo'>
+          <td>{{c.locationId}}</td>
+          <td>{{c.from}}</td>
+          <td>{{c.to}}</td>
+          <td>{{c.wedns}}</td>
+          
+        </tr>
+    </table>
+  </div>
+</div>

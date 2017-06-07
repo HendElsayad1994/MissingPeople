@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChildinfoService, Ichildinfo } from "app/child-info/childinfo.service";
 
 @Component({
   selector: 'app-child-info',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child-info.component.css']
 })
 export class ChildInfoComponent implements OnInit {
+childinfo:Ichildinfo[]=[];
+  constructor(private cs:ChildinfoService) { 
 
-  constructor() { }
+  }
 
   ngOnInit() {
+
   }
+
+  recentLoc(id){
+    this.cs.recentLocation(id);
+   // (res=>this.childinfo= res.json());
+  }
+
+
 
 }
