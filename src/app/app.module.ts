@@ -8,13 +8,15 @@ import { test } from './test.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
 import { ParentsService } from "app/login/parents.service";
+import { ChildInfoComponent } from './child-info/child-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     test,
     MainPageComponent,
-    LoginComponent
+    LoginComponent,
+    ChildInfoComponent
   ],
   imports: [
     BrowserModule,
