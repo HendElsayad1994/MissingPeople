@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { ParentsService } from "app/login/parents.service";
 import { ChildInfoComponent } from './child-info/child-info.component';
 import { ChildinfoService } from "app/child-info/childinfo.service";
+import { ChildrenComponent } from './children/children.component';
+import { ChildrenService } from "app/children/children.service";
 
 @NgModule({
   declarations: [
@@ -17,14 +19,15 @@ import { ChildinfoService } from "app/child-info/childinfo.service";
     test,
     MainPageComponent,
     LoginComponent,
-    ChildInfoComponent
+    ChildInfoComponent,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [ParentsService,ChildinfoService],
+  providers: [ParentsService,ChildinfoService,ChildrenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,13 +12,13 @@ childinfo:Ichildinfo[]=[];
 
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
+  
 
   recentLoc(id){
+
     this.cs.recentLocation(id);
-   // (res=>this.childinfo= res.json());
+    console.log(res=>this.childinfo= res.json());
   }
 
 

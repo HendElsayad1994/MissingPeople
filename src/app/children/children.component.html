@@ -1,0 +1,26 @@
+<p>
+  All children !
+</p>
+<div class="panel panel-primary">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Fname</th>
+        <th>Lname</th>
+        <th>Email</th>
+        <th>Telephone</th>
+       
+      </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let c of children">
+          <td>{{c.Fname}}</td>
+          <td>{{c.Lname}}</td>
+          <td>{{c.Email}}</td>
+          <td>{{c.Telephone}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
