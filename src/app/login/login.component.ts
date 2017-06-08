@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ParentsService, Iparent } from "app/login/parents.service";
+import { ParentsService} from "app/login/parents.service";
 
 @Component({
   selector: 'login',
@@ -8,8 +8,10 @@ import { ParentsService, Iparent } from "app/login/parents.service";
 })
 export class LoginComponent   {
 
-  parent:Iparent[]=[];
-  aparent:Iparent ;
+  parents: Array<any> =[];
+  childs: Array<any> =[];
+  selectedparent:any;
+  parentId:any;
    msg:string="";
 
 
@@ -17,37 +19,31 @@ export class LoginComponent   {
 
  
 loginsearch(n,p){
+      
       //call service
-      console.log(n,p);
+     // console.log(n,p);
    this.LS.getparent().subscribe(res=>{
     
-     this.parent=res;
-     //console.log(parent);
-     this.aparent=this.parent.find(o=>o.Email==n && o.Password==p);
+     this.parents=res;
+    // console.log(this.parents);
 
-     if(this.aparent != undefined){
+    this.selectedparent=this.parents.find(o=>o.email==n && o.password==p);
+    // console.log(this.selectedparent);
 
-     }
-     console.log('welcome',this.aparent);
+        if (this.selectedparent != undefined) {
+          this.parentId=this.selectedparent.id;
+          this.childs=this.selectedparent.childs;
+          console.log(this.childs);
 
-
-
-
-
-
-    // console.log(this.parent);
-     /*for(var i = 0; i < parent.length ; i++){
-        if(parent[i].Email == n && parent[i].password == p) {
-         this.aparent=parent[i];
-console.log(this.aparent);
-        }
-        
-      else {
-        this.msg="Incorrect data";
-      }
-
-     }*/
-     
+         // console.log(this.parentId);
+         // this.msg="Done";
+          
+    }
+    else {
+      this.msg = "Incorrect data";
+      
+    }
+      
      });
 
 
