@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildrenService, IChildren } from "app/children/children.service";
+import { ChildrenService, IChildren, Ichildinfo } from "app/children/children.service";
 
 @Component({
   selector: 'app-children',
@@ -8,7 +8,7 @@ import { ChildrenService, IChildren } from "app/children/children.service";
 })
 export class ChildrenComponent implements OnInit {
 children:IChildren[]=[];
-selectedChild:IChildren=null;
+selectedChild:Ichildinfo=null;
 
   constructor(private cs:ChildrenService) {
 
