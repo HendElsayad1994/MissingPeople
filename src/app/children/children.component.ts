@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildrenService, IChildren, Ichildinfo } from "app/children/children.service";
+import { ChildrenService, IChildren, Ichildinfo, IParent } from "app/children/children.service";
 
 @Component({
   selector: 'app-children',
@@ -8,6 +8,8 @@ import { ChildrenService, IChildren, Ichildinfo } from "app/children/children.se
 })
 export class ChildrenComponent implements OnInit {
 children:IChildren[]=[];
+parent:IParent[]=[];
+childs:IChildren[]=[];
 selectedChild:Ichildinfo=null;
 
   constructor(private cs:ChildrenService) {
@@ -18,5 +20,12 @@ selectedChild:Ichildinfo=null;
     this.cs.getchildren().subscribe(res=>this.children=res.json());
   }
  
+getchilds(id:number)
+{
+    this.cs.getchilds(id).subscribe(res=>this.parent=res.json());
+    console.log(this.parent);
+
+
+}
 
 }

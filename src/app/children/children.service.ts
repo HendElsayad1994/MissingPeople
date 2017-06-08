@@ -32,6 +32,23 @@ export interface Ichildinfo{
 
 }
 
+export interface IParent{
+  id?:number;
+  Lname:string;
+  Parent_Id:number;
+  Fname:string;
+  Email:string;
+  Password:number;
+  ImageUrl:string;
+  Telephone:number;
+  Address_Street:string;
+  Address_City:string;
+  Address_Country:string;
+  UserRole:number;
+  viewFlag:boolean;
+
+}
+
 
 @Injectable()
 export class ChildrenService {
@@ -45,11 +62,17 @@ export class ChildrenService {
     return this._http.get('http://localhost:28529/api/Child/'+id);
     
   }
+<<<<<<< HEAD
 
   getRecentLocation(id:number)
   {
     return this._http.get('http://localhost:28529/api/Child/'+id);
     
+=======
+   getchilds(id:number)
+  {
+    return this._http.get('http://localhost:28529/api/parent/'+id);
+>>>>>>> 53518bf80139a5f7822ef0f1b964fc6eb98a5fb1
   }
 }
 
