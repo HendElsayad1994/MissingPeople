@@ -8,6 +8,7 @@ import { ChildrenService, IChildren } from "app/children/children.service";
 })
 export class ChildrenComponent implements OnInit {
 children:IChildren[]=[];
+selectedChild:IChildren=null;
 
   constructor(private cs:ChildrenService) {
 
@@ -16,5 +17,6 @@ children:IChildren[]=[];
   ngOnInit() {
     this.cs.getchildren().subscribe(res=>this.children=res.json());
   }
+ 
 
 }

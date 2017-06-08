@@ -22,8 +22,13 @@ export class ChildrenService {
   constructor(private _http:Http){ }
 
  getchildren(){
-  return this._http.get('http://localhost:28529/api/child');
+  return this._http.get('http://localhost:28529/api/Child');
 }
+ getchildrenDetails(id:number)
+  {
+    return this._http.get('http://localhost:28529/api/Child/'+id);
+    
+  }
 }
 
 

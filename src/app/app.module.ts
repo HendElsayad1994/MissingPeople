@@ -12,6 +12,8 @@ import { ChildInfoComponent } from './child-info/child-info.component';
 import { ChildinfoService } from "app/child-info/childinfo.service";
 import { ChildrenComponent } from './children/children.component';
 import { ChildrenService } from "app/children/children.service";
+import { RouterModule } from "@angular/router";
+import {  App_Routes } from "app/app.routes";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ChildrenService } from "app/children/children.service";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(App_Routes)
   ],
   providers: [ParentsService,ChildinfoService,ChildrenService],
   bootstrap: [AppComponent]
