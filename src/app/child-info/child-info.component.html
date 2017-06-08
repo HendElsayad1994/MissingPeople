@@ -3,7 +3,7 @@
 <div class="panel panel-primary">
 
 <h1 class="panel-heading">
-  Child Information!
+  Child {{childinfo.fname}} Information!
 
 </h1>
 <div>
@@ -27,10 +27,10 @@
       </thead>
       <tbody>
 
-        <tr *ngFor='let c of childinfo.schaduals' *ngIf="{{c.from}} = new Date().getTime()">
+        <tr *ngFor='let c of childinfo.schaduals'>
 
           <td>{{c.location.name}}</td>
-           <td>{{c.from}}</td>
+           <td *ngIf='c.from === date.toJSON()'>{{c.from}}</td>
           <td>{{c.to}}</td>
 
           <!--<td>{{c.child_Key}}</td>
@@ -42,4 +42,34 @@
       </tbody>
     </table>
   </div>
+
+ <!-- //////////////////////////////////////////////-->
+
+  <div class="panel panel-heading">
+  Recent Locations
+
+</div>
+
+  <div class="panel panel-primary">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Number</th>
+        <th>Location</th>
+      
+      </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor='let c of childinfo.schaduals' let i = "$index">
+
+          <td>{{c.i}}</td>
+          <td>{{c.location.name}}</td>
+         
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
