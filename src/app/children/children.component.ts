@@ -24,6 +24,7 @@ getchilds(id:number)
 {
     this.cs.getchilds(id).subscribe(res=>this.parent=res.json());
     console.log(this.parent);
+    //this.childs=this.parent.find(o=>o.);
 
 
 }
