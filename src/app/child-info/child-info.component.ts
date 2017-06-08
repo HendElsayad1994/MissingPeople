@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildinfoService, Ichildinfo } from "app/child-info/childinfo.service";
+import { ChildinfoService } from "app/child-info/childinfo.service";
 import { ActivatedRoute } from "@angular/router";
-import { ChildrenService } from "app/children/children.service";
+import { ChildrenService, Ichildinfo } from "app/children/children.service";
 
 @Component({
   selector: 'app-child-info',
@@ -16,6 +16,7 @@ childinfo:Ichildinfo[]=[];
 
   ngOnInit() {
     let id =+this.route.snapshot.params['id'];
+    console.log("ChildId: "+this.route.snapshot.params['id']);
     this.cs.getchildrenDetails(id).subscribe(res=>this.childinfo=res.json())
   }
 
