@@ -62,9 +62,17 @@ export class ChildrenService {
     return this._http.get('http://localhost:28529/api/Child/'+id);
     
   }
+<<<<<<< HEAD
+
+  getRecentLocation(id:number)
+  {
+    return this._http.get('http://localhost:28529/api/Child/'+id);
+    
+=======
    getchilds(id:number)
   {
     return this._http.get('http://localhost:28529/api/parent/'+id);
+>>>>>>> 53518bf80139a5f7822ef0f1b964fc6eb98a5fb1
   }
 }
 
