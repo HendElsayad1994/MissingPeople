@@ -17,7 +17,7 @@
       </thead>
       <tbody>
 
-        <tr *ngFor="let c of children" (click)="selectedChild=c">
+        <tr *ngFor="let c of parent.childs" (click)="selectedChild=c">
           <td><a [routerLink]="['/children',c.id]">{{c.fname}}</a></td>
           <td>{{c.lname}}</td>
           <td>{{c.email}}</td>

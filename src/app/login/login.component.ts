@@ -33,9 +33,9 @@ loginsearch(n,p){
         if (this.selectedparent != undefined) {
           this.parentId=this.selectedparent.id;
           this.childs=this.selectedparent.childs;
-          console.log(this.childs);
+         // console.log(this.childs);
 
-         // console.log(this.parentId);
+         console.log(this.parentId);
          // this.msg="Done";
           
     }
