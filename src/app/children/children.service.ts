@@ -67,13 +67,14 @@ export class ChildrenService {
   getRecentLocation(id:number)
   {
     return this._http.get('http://localhost:28529/api/Child/'+id);
+  }
     
 
-  //  getchilds(id:number)
-  // {
-  //   return this._http.get('http://localhost:28529/api/parent/'+id);
+   getchilds(id:number)
+   {
+    return this._http.get('http://localhost:28529/api/parent/'+id);
 
-  // }
+   }
 }
 
 

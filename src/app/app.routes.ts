@@ -12,6 +12,7 @@ export const App_Routes:Routes=[
    {path:"children/:id",component:ChildInfoComponent},
     {path:"child-info/:id",component:ChildInfoComponent},
     
+    
     {path:"**" ,component:LoginComponent},
     //gmvm,b,hbj
 
