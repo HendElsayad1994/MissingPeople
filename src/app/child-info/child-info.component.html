@@ -61,9 +61,9 @@
       </thead>
       <tbody>
 
-        <tr *ngFor='let c of childinfo.schaduals' let i = "$index">
+        <tr *ngFor='let c of childinfo.schaduals let i=index'>
 
-          <td>{{c.i}}</td>
+          <td>{{i+1}}</td>
           <td>{{c.location.name}}</td>
          
           
