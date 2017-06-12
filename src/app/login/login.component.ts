@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ParentsService} from "app/login/parents.service";
+import { ParentsService } from "app/login/parents.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'login',
@@ -15,7 +16,7 @@ export class LoginComponent   {
    msg:string="";
 
 
-  constructor(private LS:ParentsService){}
+  constructor(private LS:ParentsService, private router:Router){}
 
  
 loginsearch(n,p){
@@ -36,6 +37,7 @@ loginsearch(n,p){
          // console.log(this.childs);
 
          console.log(this.parentId);
+         this.router.navigate(['/Login',this.parentId]);
          // this.msg="Done";
           
     }
