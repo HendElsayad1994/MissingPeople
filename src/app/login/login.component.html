@@ -1,10 +1,35 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> <!-- Optional theme --> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> <!-- Latest compiled and minified JavaScript --> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  Email: <input type="text" id="username" #username><br><br>
-  Password: <input type="password" id="pass" #pass><br><br>
-  <button (click)="loginsearch(username.value,pass.value)" [routerLink]="['/Login',parentId]">Login</button><br><br>
-//HendElsayad 
+  
+  <div class="panel panel-primary">
+    <h1 class="panel-heading">
+        Login
+    </h1>
+    <form aria-colspan="6">
+<div class="panel panel-primary">
+    <table class="table">
+      <thead>
+<tr>
+  <td><label for="exampleInputEmail1"> Email</label>
+  <input class="panel panel-primary " type="text" id="username" #username><br><br></td>
+    </tr>
+    <tr>
+  <td><label for="exampleInputPassword1">Password </label>
+  
+  <input class="panel panel-primary" type="password" id="pass" #pass><br><br></td>
+    </tr>
+    <tr>
+      <td>
+  <button class="btn btn-success col-ml-6" (click)="loginsearch(username.value,pass.value)" [routerLink]="['/Login',parentId]">Login</button>
+ <button class="btn btn-danger col-ml-7" (click)="btncancel(username.value,pass.value)" [routerLink]="['/Login']">Cancel</button><br><br></td>
+
+  
 <label id="msgLbl">{{msg}}</label>
+    </tr>
+    </thead>
+    </table>
+  </div>
+    </form>
 
 
 
