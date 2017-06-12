@@ -12,7 +12,7 @@
   
 </div>
 <div class="panel panel-heading">
-  Today Schadual
+  Today Schedule
 </div>
 
   <div class="panel panel-primary">
@@ -30,7 +30,8 @@
         <tr *ngFor='let c of childinfo.schaduals'>
 
           <td>{{c.location.name}}</td>
-           <td *ngIf='c.from === date.toJSON()'>{{c.from}}</td>
+          <td>{{c.from}}</td>
+           <!--<td *ngIf='c.from === date.toJSON()'>{{c.from}}</td>-->
           <td>{{c.to}}</td>
 
           <!--<td>{{c.child_Key}}</td>
