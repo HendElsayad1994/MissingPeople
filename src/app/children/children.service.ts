@@ -62,30 +62,24 @@ export class ChildrenService {
     return this._http.get('http://localhost:28529/api/Child/'+id);
     
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 2d76f63ea4be56fc1158e05f43d328be30e10e00
+
 
   getRecentLocation(id:number)
   {
     return this._http.get('http://localhost:28529/api/Child/'+id);
   }
     
-<<<<<<< HEAD
-=======
 
->>>>>>> 2d76f63ea4be56fc1158e05f43d328be30e10e00
+
    getchilds(id:number)
    {
     return this._http.get('http://localhost:28529/api/parent/'+id);
-<<<<<<< HEAD
   }
-=======
+
 
    }
->>>>>>> 2d76f63ea4be56fc1158e05f43d328be30e10e00
-}
+
 
 
 
