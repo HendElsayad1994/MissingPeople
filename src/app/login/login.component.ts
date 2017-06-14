@@ -14,6 +14,7 @@ export class LoginComponent   {
   selectedparent:any;
   parentId:any;
    msg:string="";
+   img:string="assets/baby.png"
 
 
   constructor(private LS:ParentsService, private router:Router){}

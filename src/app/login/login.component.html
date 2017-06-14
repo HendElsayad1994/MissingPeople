@@ -10,34 +10,59 @@
   <!--<img src="C:\Users\Hend\Desktop\childs.jpg" alt="nooooooo"><br><br>-->
   
   <div class="panel panel-primary">
-    <h1 class="panel-heading">
-        Login
-    </h1>
-    <form aria-colspan="6">
-<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h1 class="text-center">Login</h1>
+    </div>
+  
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-7">
+
+              <img src={{img}}/>
+
+      </div>
+
+
+<div class="col-md-5">
+  
+<form aria-colspan="6" style="margin-top:20px">
     <table class="table">
       <thead>
+  <div class="form-group">
 <tr>
   <td><label for="exampleInputEmail1"> Email</label>
-  <input class="panel panel-primary " type="text" id="username" #username><br><br></td>
+  <input class="form-control" type="text" id="username" #username></td>
     </tr>
+    </div>
+     <div class="form-group">
     <tr>
+
   <td><label for="exampleInputPassword1">Password </label>
   
-  <input class="panel panel-primary" type="password" id="pass" #pass><br><br></td>
+  <input class="form-control" type="password" id="pass" #pass></td>
     </tr>
+    </div>
     <tr>
       <td>
+<<<<<<< HEAD
   <button class="btn btn-success col-ml-6" (click)="loginsearch(username.value,pass.value)" >Login</button>
  
+=======
+  <button class="btn btn-success col-ml-6" (click)="loginsearch(username.value,pass.value)" [routerLink]="['/Login',parentId]">Login</button>
+>>>>>>> 675cd33d47a272b5e7df6ae659251bca7888f610
 
   
 <label id="msgLbl">{{msg}}</label>
     </tr>
     </thead>
     </table>
+  </form>
   </div>
-    </form>
+   </div>
+  </div>
+    </div>
+  </div>
+    
 
 
 
