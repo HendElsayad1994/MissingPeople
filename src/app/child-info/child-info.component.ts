@@ -55,18 +55,16 @@ historyObj: IHistory = {
     let id = +this.route.snapshot.params['id'];
     this.date = new Date();
     console.log(this.date.toJSON().toUpperCase());
-    this.cs.getchildrenDetails(id).subscribe(res => this.childObj = res.json());
+    this.cs.getchildrenDetails(id).subscribe(res => {
+      this.childObj = res.json();
+      console.log("Child obj>>>>",this.childObj);
+        this.socket.on('connect', () => {
+      console.log("from parent app", this.childObj.parent_Id);
+      //console.log("from parent app>>Obj", this.selectedParent);
 
-    // this.socket = io.connect("http://realtimetrack.eu-2.evennode.com/");
-    this.socket.on('connect', () => {
-      console.log("from parent app", this.selectedParent.id);
-      console.log("from parent app>>Obj", this.selectedParent);
-
-      this.socket.emit('joinParent', this.selectedParent.id);
+      this.socket.emit('joinParent', this.childObj.parent_Id);
     })
-
-
-      this.cs.getHistoryByCId(this.childObj.id).subscribe(data => {
+    this.cs.getHistoryByCId(this.childObj.id).subscribe(data => {
         if (data) {
           let lastLoc = data[0];
           console.log("LastLocation>>>", lastLoc);
@@ -80,6 +78,15 @@ historyObj: IHistory = {
         }
         
       })
+
+
+
+});
+    
+
+
+
+
 
 
 
@@ -107,7 +114,7 @@ historyObj: IHistory = {
       }
 
 
-    })
+    });
 
 
   }

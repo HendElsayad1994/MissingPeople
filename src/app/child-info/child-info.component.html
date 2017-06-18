@@ -12,18 +12,20 @@
       </div>
 <h1 class="panel-heading">
   
-  Child {{childinfo.fname}} Information!
+  Child {{childObj.fname}} Information!
 
 
 </h1>
 <!--<app-location></app-location>-->
 <agm-map
+
       *ngIf="locationFlag"
       [latitude]="lat"
       [longitude]="lng"
       [zoom]="zoom"
       [disableDefaultUI]="true"
       [zoomControl]="true"
+      class="map"
       >
     
       <agm-marker 
@@ -77,7 +79,7 @@
   </div>
 
   ////////////////////////////////////////////// -->
-
+<!--
   <div class="panel panel-heading">
   Recent Locations
 
@@ -106,4 +108,4 @@
   </div>
 
 </div>
-
+-->
