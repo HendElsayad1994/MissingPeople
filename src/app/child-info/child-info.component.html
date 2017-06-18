@@ -16,12 +16,34 @@
 
 
 </h1>
-<app-location></app-location>
-<div>
-  <br/>
-  <br/>
-  
-</div>
+<!--<app-location></app-location>-->
+<agm-map
+      *ngIf="locationFlag"
+      [latitude]="lat"
+      [longitude]="lng"
+      [zoom]="zoom"
+      [disableDefaultUI]="true"
+      [zoomControl]="true"
+      >
+    
+      <agm-marker 
+          [latitude]="lat"
+          [longitude]="lng"
+          [label]="childObj.fname"
+          
+          >
+          
+        <agm-info-window>
+          <strong>Speed {{speed}} Km/h</strong>
+        </agm-info-window>
+        
+      </agm-marker>
+      
+
+
+    </agm-map>
+
+<!--
 <div class="panel panel-heading">
   Today Schedule
 </div>
@@ -43,10 +65,9 @@
           <td>{{c.location.name}}</td>
           <td>{{c.from}}</td>
            <!--<td *ngIf='c.from === date.toJSON()'>{{c.from}}</td>-->
-          <td>{{c.to}}</td>
 
           <!--<td>{{c.child_Key}}</td>
-          <td>{{c.location_Key}}</td> -->
+          <td>{{c.location_Key}}</td> 
          
          
           
@@ -55,7 +76,7 @@
     </table>
   </div>
 
- <!-- //////////////////////////////////////////////-->
+  ////////////////////////////////////////////// -->
 
   <div class="panel panel-heading">
   Recent Locations

@@ -20,6 +20,9 @@ import { RouterModule } from "@angular/router";
 import {  App_Routes } from "app/app.routes";
 import { LocationComponent } from './location/location.component';
 //import { [Map-Loc]Component } from './[map-loc]/[map-loc].component';
+import {SocketIoModule, SocketIoConfig} from 'ng2-socket-io' 
+
+const config:SocketIoConfig= {url:'http://realtimetrack.eu-2.evennode.com/', options:{}};
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { LocationComponent } from './location/location.component';
     BrowserModule,
     CommonModule,
     FormsModule,
+    SocketIoModule.forRoot(config),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyADdU2vsWzIC9_AtzkDUfogWJUgbSKb5-g'
     }),

@@ -9,7 +9,7 @@ import 'rxjs';
 export class ParentsService {
 
 
-  private commentsUrl = 'http://localhost:28529/api'; 
+  private commentsUrl = 'http://trackapi.gear.host/api'; 
     constructor(private _http:Http) { }
 getparent() : Observable<any> {
 
